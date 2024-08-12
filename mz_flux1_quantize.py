@@ -68,7 +68,7 @@ def MZ_ModelLoadStateDict_call(kwargs):
     return (model_patcher,)
 
 
-def MZ_FluxQuantizeUNETLoader_call(kwargs):
+def MZ_Flux1QuantizeUNETLoader_call(kwargs):
     unet_name = kwargs["unet_name"]
     import folder_paths
     unet_path = folder_paths.get_full_path("unet", unet_name)

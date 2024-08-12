@@ -8,7 +8,7 @@ from . import mz_flux_quantize
 import comfy
 
 AUTHOR_NAME = "MinusZone"
-CATEGORY_NAME = f"{AUTHOR_NAME} - FluxQuantize"
+CATEGORY_NAME = f"{AUTHOR_NAME} - Flux1Quantize"
 
 
 class AlwaysEqualProxy(str):
@@ -27,7 +27,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 }
 
 
-class MZ_FluxQuantizeUNETLoader():
+class MZ_Flux1QuantizeUNETLoader():
     @classmethod
     def INPUT_TYPES(s):
         return {"required": {
@@ -44,8 +44,8 @@ class MZ_FluxQuantizeUNETLoader():
 
     def load_unet(self, **kwargs):
         importlib.reload(mz_flux_quantize)
-        return mz_flux_quantize.MZ_FluxQuantizeUNETLoader_call(kwargs)
+        return mz_flux_quantize.MZ_Flux1QuantizeUNETLoader_call(kwargs)
 
 
-NODE_CLASS_MAPPINGS["MZ_FluxQuantizeUNETLoader"] = MZ_FluxQuantizeUNETLoader
-NODE_DISPLAY_NAME_MAPPINGS["MZ_FluxQuantizeUNETLoader"] = f"{AUTHOR_NAME} - FluxQuantizeUNETLoader"
+NODE_CLASS_MAPPINGS["MZ_Flux1QuantizeUNETLoader"] = MZ_Flux1QuantizeUNETLoader
+NODE_DISPLAY_NAME_MAPPINGS["MZ_Flux1QuantizeUNETLoader"] = f"{AUTHOR_NAME} - Flux1QuantizeUNETLoader"
