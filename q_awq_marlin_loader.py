@@ -30,7 +30,7 @@ def quantize_loader(model, state_dict, bits=4, device='cuda', includes=[]):
 
     for name, module in model.named_modules():
         if name in qkey:
-            print(f"Quantizing {name}")
+            # print(f"Quantizing {name}")
 
             module = module.to(dtype=torch.float16)
 
