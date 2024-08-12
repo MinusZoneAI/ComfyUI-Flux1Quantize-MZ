@@ -1,4 +1,4 @@
-![image](./examples/workflow.png)
+![image](./examples/workflow1.png)
 
 ## Flux1的非官方量化模型
 
