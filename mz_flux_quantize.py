@@ -31,7 +31,7 @@ def MZ_EmptyModel_call(kwargs):
             "qkv_bias": True,
             "guidance_embed": True
         })
-        model_config.manual_cast_dtype = torch.float32
+        model_config.manual_cast_dtype = torch.bfloat16
 
         model = comfy.model_base.Flux(
             model_config=model_config,
@@ -72,8 +72,7 @@ def MZ_FluxQuantizeUNETLoader_call(kwargs):
     unet_name = kwargs["unet_name"]
     import folder_paths
     unet_path = folder_paths.get_full_path("unet", unet_name)
-    
-    
+
     model = MZ_EmptyModel_call({"model_type": "Flux"})[0]
 
     model_patcher = MZ_ModelLoadStateDict_call({
