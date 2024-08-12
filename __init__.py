@@ -4,7 +4,7 @@ import os
 import traceback
 import folder_paths
 import importlib
-from . import mz_flux_quantize
+from . import mz_flux1_quantize
 import comfy
 
 AUTHOR_NAME = "MinusZone"
@@ -43,8 +43,8 @@ class MZ_Flux1QuantizeUNETLoader():
     CATEGORY = CATEGORY_NAME
 
     def load_unet(self, **kwargs):
-        importlib.reload(mz_flux_quantize)
-        return mz_flux_quantize.MZ_Flux1QuantizeUNETLoader_call(kwargs)
+        importlib.reload(mz_flux1_quantize)
+        return mz_flux1_quantize.MZ_Flux1QuantizeUNETLoader_call(kwargs)
 
 
 NODE_CLASS_MAPPINGS["MZ_Flux1QuantizeUNETLoader"] = MZ_Flux1QuantizeUNETLoader
