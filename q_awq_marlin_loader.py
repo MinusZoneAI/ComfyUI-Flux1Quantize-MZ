@@ -42,10 +42,8 @@ def quantize_loader(model, state_dict, bits=4, device='cuda', includes=[]):
             )
             q_linear.post_init()
 
-            module.cpu()
             q_linear = q_linear.to(device)
             set_op_by_name(model, name, q_linear)
-            clear_memory(module)
 
     model.load_state_dict(state_dict, strict=False)
     return model
