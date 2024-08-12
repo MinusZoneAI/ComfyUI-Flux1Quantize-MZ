@@ -14,4 +14,4 @@ pip install git+https://github.com/IST-DASLab/marlin
  
 模型下载地址:
 
-https://www.modelscope.cn/models/wailovet/flux1-quantize/resolve/master/flux1-unet-marlin-int4.safetensors
+https://www.modelscope.cn/models/wailovet/flux1-quantize/resolve/master/flux1-dev-unet-marlin-int4.safetensors
